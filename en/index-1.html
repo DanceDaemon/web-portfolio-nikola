@@ -73,7 +73,670 @@
     
         
     <div class="postindex">
-            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/welcome-to-portfolio/" class="u-url">Welcome to my portfolio</a></h1>
+            <article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/iw-1/" class="u-url">Самостоятельная работа 1</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Eugene Savostin
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/iw-1/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-11-04T00:00:00+03:00" itemprop="datePublished" title="2019-11-04 00:00">2019-11-04 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <img alt="../../images/iw-1.png" src="images/iw-1.png">
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lab-3/" class="u-url">Лабораторная работа №3 "ДЦВП с управлением по аргументу. Численное интегрирование". Вариант - 9</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Eugene Savostin
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/lab-3/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-10-30T00:00:00+03:00" itemprop="datePublished" title="2019-10-30 00:00">2019-10-30 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <dl class="docinfo simple">
+<dt>Тема<span class="colon">:</span>
+</dt>
+<dd>
+<p>Детерминированный циклический вычислительный процесс с управлением по аргументу. Численное интегрирование</p>
+</dd>
+<dt>Цель<span class="colon">:</span>
+</dt>
+<dd>
+<p>Научиться организации ДЦВП с управлением по аргументу на примере численного интегрирования</p>
+</dd>
+<dt>Используемое оборудование<span class="colon">:</span>
+</dt>
+<dd>
+<p>ПК, среда программирования PascalABC</p>
+</dd>
+</dl>
+<section id="section-1"><h2>Задание 1</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Решить выражение методом левых частей.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.1.png" src="images/3.1.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/3.1.pas.html">3.1.pas</a>  <a class="reference external" href="../listings/3.1.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_37ffc18adb8c407ca61f14267020c865-1" name="rest_code_37ffc18adb8c407ca61f14267020c865-1" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-1"></a><span class="k">program</span> <span class="n">metodLch</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-2" name="rest_code_37ffc18adb8c407ca61f14267020c865-2" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-2"></a><span class="k">var</span> <span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">h</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-3" name="rest_code_37ffc18adb8c407ca61f14267020c865-3" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-3"></a><span class="k">begin</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-4" name="rest_code_37ffc18adb8c407ca61f14267020c865-4" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-4"></a>    <span class="n">y</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-5" name="rest_code_37ffc18adb8c407ca61f14267020c865-5" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-5"></a>    <span class="n">h</span><span class="o">:=</span><span class="mf">0.06</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-6" name="rest_code_37ffc18adb8c407ca61f14267020c865-6" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-6"></a>    <span class="n">x</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-7" name="rest_code_37ffc18adb8c407ca61f14267020c865-7" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-7"></a>    <span class="k">while</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mf">0.8</span><span class="o">-</span><span class="n">h</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-8" name="rest_code_37ffc18adb8c407ca61f14267020c865-8" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-8"></a>        <span class="n">y</span><span class="o">:=</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)))</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-9" name="rest_code_37ffc18adb8c407ca61f14267020c865-9" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-9"></a>        <span class="n">x</span><span class="o">:=</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-10" name="rest_code_37ffc18adb8c407ca61f14267020c865-10" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-10"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-11" name="rest_code_37ffc18adb8c407ca61f14267020c865-11" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-11"></a>    <span class="n">y</span><span class="o">:=</span><span class="n">y</span><span class="o">*</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-12" name="rest_code_37ffc18adb8c407ca61f14267020c865-12" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-12"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="n">y</span><span class="o">:</span><span class="mi">10</span><span class="o">:</span><span class="mi">6</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_37ffc18adb8c407ca61f14267020c865-13" name="rest_code_37ffc18adb8c407ca61f14267020c865-13" href="posts/lab-3/#rest_code_37ffc18adb8c407ca61f14267020c865-13"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.1_res.png" src="images/3.1_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя работу, я использовал для вычислений оператор “while”. При введении пропорциональных значений
+величины шага (0,06;0.006 и т.д.) получались примерно одинаковые, но не идентичные, результаты. Так
+получалось из-за погрешности, существующей в самой математической формуле.</p>
+</section><section id="section-2"><h2>Задание 2</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Решить выражение методом правых частей.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.2.png" src="images/3.2.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/3.2.pas.html">3.2.pas</a>  <a class="reference external" href="../listings/3.2.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_fee06f42a64346ac9c31911de2761dfd-1" name="rest_code_fee06f42a64346ac9c31911de2761dfd-1" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-1"></a><span class="k">program</span> <span class="n">metodPRch</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-2" name="rest_code_fee06f42a64346ac9c31911de2761dfd-2" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-2"></a><span class="k">var</span> <span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">h</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-3" name="rest_code_fee06f42a64346ac9c31911de2761dfd-3" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-3"></a><span class="k">begin</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-4" name="rest_code_fee06f42a64346ac9c31911de2761dfd-4" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-4"></a>    <span class="n">y</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-5" name="rest_code_fee06f42a64346ac9c31911de2761dfd-5" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-5"></a>    <span class="n">h</span><span class="o">:=</span><span class="mf">0.06</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-6" name="rest_code_fee06f42a64346ac9c31911de2761dfd-6" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-6"></a>    <span class="n">x</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">+</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-7" name="rest_code_fee06f42a64346ac9c31911de2761dfd-7" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-7"></a>    <span class="k">while</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mf">0.8</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-8" name="rest_code_fee06f42a64346ac9c31911de2761dfd-8" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-8"></a>        <span class="n">y</span><span class="o">:=</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)))</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-9" name="rest_code_fee06f42a64346ac9c31911de2761dfd-9" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-9"></a>        <span class="n">x</span><span class="o">:=</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-10" name="rest_code_fee06f42a64346ac9c31911de2761dfd-10" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-10"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-11" name="rest_code_fee06f42a64346ac9c31911de2761dfd-11" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-11"></a>    <span class="n">y</span><span class="o">:=</span><span class="n">y</span><span class="o">*</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-12" name="rest_code_fee06f42a64346ac9c31911de2761dfd-12" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-12"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="n">y</span><span class="o">:</span><span class="mi">10</span><span class="o">:</span><span class="mi">6</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_fee06f42a64346ac9c31911de2761dfd-13" name="rest_code_fee06f42a64346ac9c31911de2761dfd-13" href="posts/lab-3/#rest_code_fee06f42a64346ac9c31911de2761dfd-13"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.2_res.png" src="images/3.2_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя работу, я использовал для вычислений оператор “while”. При введении пропорциональных значений величины шага
+(0,06;0.006 и т.д.) получались примерно одинаковые, но не идентичные, результаты. Так получалось из-за погрешности,
+существующей в самой математической формуле. Различие с предыдущей задачей состоит в том, что нижний предел в интеграле
+там был равен 0,2, а верхний - 0,8-h. Здесь же, наоборот, нижний - 0,2+h, а верхний - 0.8.</p>
+</section><section id="section-3"><h2>Задание 3</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Решить выражение с помощью метода трапеций</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.3.png" src="images/3.3.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/3.3.pas.html">3.3.pas</a>  <a class="reference external" href="../listings/3.3.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_b897bbec9475455eae4773087801df49-1" name="rest_code_b897bbec9475455eae4773087801df49-1" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-1"></a><span class="k">program</span> <span class="n">metodTRAP</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-2" name="rest_code_b897bbec9475455eae4773087801df49-2" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-2"></a><span class="k">var</span> <span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">r</span><span class="o">,</span><span class="n">n</span><span class="o">,</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">h</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-3" name="rest_code_b897bbec9475455eae4773087801df49-3" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-3"></a><span class="k">begin</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-4" name="rest_code_b897bbec9475455eae4773087801df49-4" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-4"></a>    <span class="n">a</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-5" name="rest_code_b897bbec9475455eae4773087801df49-5" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-5"></a>    <span class="n">b</span><span class="o">:=</span><span class="mf">0.8</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-6" name="rest_code_b897bbec9475455eae4773087801df49-6" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-6"></a>    <span class="n">y</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-7" name="rest_code_b897bbec9475455eae4773087801df49-7" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-7"></a>    <span class="n">h</span><span class="o">:=</span><span class="mf">0.06</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-8" name="rest_code_b897bbec9475455eae4773087801df49-8" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-8"></a>    <span class="n">x</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">+</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-9" name="rest_code_b897bbec9475455eae4773087801df49-9" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-9"></a>    <span class="n">r</span><span class="o">:=</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">))</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-10" name="rest_code_b897bbec9475455eae4773087801df49-10" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-10"></a>    <span class="n">n</span><span class="o">:=</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">))</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-11" name="rest_code_b897bbec9475455eae4773087801df49-11" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-11"></a>    <span class="k">while</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mf">0.8</span><span class="o">-</span><span class="n">h</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-12" name="rest_code_b897bbec9475455eae4773087801df49-12" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-12"></a>        <span class="n">y</span><span class="o">:=</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)))</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-13" name="rest_code_b897bbec9475455eae4773087801df49-13" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-13"></a>        <span class="n">x</span><span class="o">:=</span><span class="n">x</span><span class="o">+</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-14" name="rest_code_b897bbec9475455eae4773087801df49-14" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-14"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-15" name="rest_code_b897bbec9475455eae4773087801df49-15" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-15"></a>    <span class="n">y</span><span class="o">:=</span><span class="p">(</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">n</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-16" name="rest_code_b897bbec9475455eae4773087801df49-16" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-16"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="n">y</span><span class="o">:</span><span class="mi">10</span><span class="o">:</span><span class="mi">6</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b897bbec9475455eae4773087801df49-17" name="rest_code_b897bbec9475455eae4773087801df49-17" href="posts/lab-3/#rest_code_b897bbec9475455eae4773087801df49-17"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.3_res.png" src="images/3.3_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данную задачу, я вводил дополнительные идентификаторы для значений функции в точках.
+При введении пропорциональных значений величины шага (0,06;0.006 и т.д.) получались примерно одинаковые,
+но не идентичные, результаты. Так получалось из-за погрешности, существующей в самой математической формуле.</p>
+</section><section id="section-4"><h2>Задание 4</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Решить выражение с помощью метода парабол</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.4.png" src="images/3.4.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/3.4.pas.html">3.4.pas</a>  <a class="reference external" href="../listings/3.4.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_b2efc25d748549e484ab4ce3d664970d-1" name="rest_code_b2efc25d748549e484ab4ce3d664970d-1" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-1"></a><span class="k">program</span> <span class="n">metodPAR</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-2" name="rest_code_b2efc25d748549e484ab4ce3d664970d-2" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-2"></a><span class="k">var</span> <span class="n">s</span><span class="o">,</span><span class="n">l</span><span class="o">,</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">r</span><span class="o">,</span><span class="n">n</span><span class="o">,</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">h</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-3" name="rest_code_b2efc25d748549e484ab4ce3d664970d-3" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-3"></a><span class="k">begin</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-4" name="rest_code_b2efc25d748549e484ab4ce3d664970d-4" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-4"></a>    <span class="n">a</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-5" name="rest_code_b2efc25d748549e484ab4ce3d664970d-5" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-5"></a>    <span class="n">b</span><span class="o">:=</span><span class="mf">0.8</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-6" name="rest_code_b2efc25d748549e484ab4ce3d664970d-6" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-6"></a>    <span class="n">y</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-7" name="rest_code_b2efc25d748549e484ab4ce3d664970d-7" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-7"></a>    <span class="n">h</span><span class="o">:=</span><span class="mf">0.06</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-8" name="rest_code_b2efc25d748549e484ab4ce3d664970d-8" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-8"></a>    <span class="n">x</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">+</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-9" name="rest_code_b2efc25d748549e484ab4ce3d664970d-9" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-9"></a>    <span class="n">l</span><span class="o">:=</span><span class="mf">0.2</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-10" name="rest_code_b2efc25d748549e484ab4ce3d664970d-10" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-10"></a>    <span class="n">r</span><span class="o">:=</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">))</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-11" name="rest_code_b2efc25d748549e484ab4ce3d664970d-11" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-11"></a>    <span class="n">n</span><span class="o">:=</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">b</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">b</span><span class="o">*</span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">))</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-12" name="rest_code_b2efc25d748549e484ab4ce3d664970d-12" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-12"></a>    <span class="k">while</span> <span class="n">x</span><span class="o">&lt;=</span><span class="mf">0.8</span><span class="o">-</span><span class="n">h</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-13" name="rest_code_b2efc25d748549e484ab4ce3d664970d-13" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-13"></a>        <span class="n">y</span><span class="o">:=</span><span class="n">y</span><span class="o">+</span><span class="p">(</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)))</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-14" name="rest_code_b2efc25d748549e484ab4ce3d664970d-14" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-14"></a>        <span class="n">x</span><span class="o">:=</span><span class="n">x</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-15" name="rest_code_b2efc25d748549e484ab4ce3d664970d-15" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-15"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-16" name="rest_code_b2efc25d748549e484ab4ce3d664970d-16" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-16"></a>    <span class="k">while</span> <span class="n">l</span><span class="o">&lt;=</span><span class="mf">0.8</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-17" name="rest_code_b2efc25d748549e484ab4ce3d664970d-17" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-17"></a>        <span class="n">s</span><span class="o">:=</span><span class="n">s</span><span class="o">+</span><span class="p">(</span><span class="nb">sin</span><span class="p">((</span><span class="mi">2</span><span class="o">*</span><span class="n">l</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">cos</span><span class="p">((</span><span class="n">l</span><span class="o">*</span><span class="n">l</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="nb">pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)))</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-18" name="rest_code_b2efc25d748549e484ab4ce3d664970d-18" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-18"></a>        <span class="n">l</span><span class="o">:=</span><span class="n">l</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">h</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-19" name="rest_code_b2efc25d748549e484ab4ce3d664970d-19" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-19"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-20" name="rest_code_b2efc25d748549e484ab4ce3d664970d-20" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-20"></a>    <span class="n">y</span><span class="o">:=</span><span class="n">h</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">r</span><span class="o">+</span><span class="n">n</span><span class="o">+</span><span class="mi">4</span><span class="o">*</span><span class="n">y</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">s</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-21" name="rest_code_b2efc25d748549e484ab4ce3d664970d-21" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-21"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="n">y</span><span class="o">:</span><span class="mi">10</span><span class="o">:</span><span class="mi">6</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b2efc25d748549e484ab4ce3d664970d-22" name="rest_code_b2efc25d748549e484ab4ce3d664970d-22" href="posts/lab-3/#rest_code_b2efc25d748549e484ab4ce3d664970d-22"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/3.4_res.png" src="images/3.4_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данную задачу, я ввел дополнительный оператор “while”,
+так как при решении данным методом нужно использовать две функции “Суммы”. При введении пропорциональных значений
+величины шага (0,06;0.006 и т.д.) получались примерно одинаковые, но не идентичные, результаты.
+Так получалось из-за погрешности, существующей в самой математической формуле.</p>
+<p>Сводная таблица результатов</p>
+<img alt="../../images/3.png" src="images/3.png"><p><strong>Вывод</strong></p>
+<p>При сравнении результатов вычислений, приведенных в таблице,
+можно сделать два вывода: во-первых, количество разбиений
+напрямую влияет на результат вычисления, а точнее на погрешность при
+вычислении. Чем больше разбиений мы сделаем, тем точнее будет результат.
+Во-вторых, метод парабол является самым точным из приведенных и не так
+чувствителен к количеству разбиений, как другие методы, потому что разброс в значениях у него
+не столь велик, как у остальных методов.</p>
+</section>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/iw-2/" class="u-url">Самостоятельная работа 2</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Eugene Savostin
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/iw-2/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-10-20T00:00:00+03:00" itemprop="datePublished" title="2019-10-20 00:00">2019-10-20 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <dl class="docinfo simple">
+<dt>Задание<span class="colon">:</span>
+</dt>
+<dd>
+<p>Составить список электронных музеев ЭВМ</p>
+</dd>
+</dl>
+<img alt="../../images/iw-2.1.png" src="images/iw-2.1.png"><img alt="../../images/iw-2.2.png" src="images/iw-2.2.png">
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lab-2/" class="u-url">Лабораторная работа №2 "Детерминированные циклические вычислительные процессы с управлением по аргументу"</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Eugene Savostin
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/lab-2/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-10-17T00:00:00+03:00" itemprop="datePublished" title="2019-10-17 00:00">2019-10-17 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <dl class="docinfo simple">
+<dt>Тема<span class="colon">:</span>
+</dt>
+<dd>
+<p>Детерминированные циклические вычислительные процессы с управлением по аргументу</p>
+</dd>
+<dt>Цель<span class="colon">:</span>
+</dt>
+<dd>
+<p>Научиться вычислять детерминированные циклические вычислительные процессы с управлением по аргументу</p>
+</dd>
+<dt>Используемое оборудование<span class="colon">:</span>
+</dt>
+<dd>
+<p>ПК, среда программирования PascalABC</p>
+</dd>
+</dl>
+<section id="section-1"><h2>Задание 1</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Вычислить n!, где n вводится с клавиатуры.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.1.png" src="images/2.1.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/2.1.pas.html">2.1.pas</a>  <a class="reference external" href="../listings/2.1.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_997f9c9cbcd542fd9899434a8c970025-1" name="rest_code_997f9c9cbcd542fd9899434a8c970025-1" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-1"></a><span class="k">program</span> <span class="n">p1</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-2" name="rest_code_997f9c9cbcd542fd9899434a8c970025-2" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-2"></a><span class="k">var</span> <span class="n">i</span><span class="o">,</span><span class="n">n</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-3" name="rest_code_997f9c9cbcd542fd9899434a8c970025-3" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-3"></a><span class="n">s</span><span class="o">:</span><span class="kt">longint</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-4" name="rest_code_997f9c9cbcd542fd9899434a8c970025-4" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-4"></a><span class="k">begin</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-5" name="rest_code_997f9c9cbcd542fd9899434a8c970025-5" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-5"></a>    <span class="n">s</span><span class="o">:=</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-6" name="rest_code_997f9c9cbcd542fd9899434a8c970025-6" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-6"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите любое целое число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-7" name="rest_code_997f9c9cbcd542fd9899434a8c970025-7" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-7"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-8" name="rest_code_997f9c9cbcd542fd9899434a8c970025-8" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-8"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">1</span> <span class="k">to</span> <span class="n">n</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-9" name="rest_code_997f9c9cbcd542fd9899434a8c970025-9" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-9"></a>        <span class="n">s</span><span class="o">:=</span><span class="n">s</span><span class="o">*</span><span class="n">i</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-10" name="rest_code_997f9c9cbcd542fd9899434a8c970025-10" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-10"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-11" name="rest_code_997f9c9cbcd542fd9899434a8c970025-11" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-11"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_997f9c9cbcd542fd9899434a8c970025-12" name="rest_code_997f9c9cbcd542fd9899434a8c970025-12" href="posts/lab-2/#rest_code_997f9c9cbcd542fd9899434a8c970025-12"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.1_res.png" src="images/2.1_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>К переменной результата был применен тип longint, так как тип integer
+в данном случае не подходит, ведь при его помощи невозможно рассчитывать факториалы больших чисел.</p>
+</section><section id="section-2"><h2>Задание 2</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Рассчитать значения для построения диаграммы направленности антенны в вертикальной плоскости.</p>
+<img alt="../../images/2.2_q.png" src="images/2.2_q.png"><dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.2.png" src="images/2.2.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/2.2.pas.html">2.2.pas</a>  <a class="reference external" href="../listings/2.2.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-1" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-1" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-1"></a><span class="k">program</span> <span class="n">p2</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-2" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-2" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-2"></a><span class="k">var</span> <span class="n">Q</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-3" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-3" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-3"></a><span class="n">chast</span><span class="o">,</span><span class="n">COSin</span><span class="o">,</span><span class="n">SINus</span><span class="o">,</span><span class="n">Chisl</span><span class="o">,</span><span class="n">Znam</span><span class="o">,</span><span class="n">F</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-4" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-4" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-4"></a><span class="k">begin</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-5" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-5" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-5"></a>    <span class="n">chast</span><span class="o">:=</span><span class="nb">Pi</span><span class="o">*</span><span class="mi">13</span><span class="o">,</span><span class="mi">5</span><span class="o">/</span><span class="mi">3</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-6" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-6" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-6"></a>    <span class="k">for</span> <span class="n">Q</span><span class="o">:=</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">90</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-7" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-7" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-7"></a>        <span class="n">COSin</span><span class="o">:=</span><span class="nb">cos</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-8" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-8" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-8"></a>        <span class="n">SINUS</span><span class="o">:=</span><span class="nb">sin</span><span class="p">(</span><span class="n">Q</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-9" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-9" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-9"></a>        <span class="n">Chisl</span><span class="o">:=</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">SINUS</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">chast</span><span class="o">*</span><span class="n">COSin</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-10" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-10" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-10"></a>        <span class="n">Znam</span><span class="o">:=</span><span class="p">(</span><span class="nb">Pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="nb">Pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">chast</span><span class="o">*</span><span class="n">COSin</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">chast</span><span class="o">*</span><span class="n">COSin</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-11" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-11" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-11"></a>        <span class="n">F</span><span class="o">:=</span><span class="n">Chisl</span><span class="o">/</span><span class="n">Znam</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-12" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-12" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-12"></a>        <span class="nb">writeln</span> <span class="p">(</span><span class="s">'F('</span><span class="o">,</span><span class="n">Q</span><span class="o">,</span><span class="s">') равняется '</span><span class="o">,</span> <span class="n">F</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="mi">2</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-13" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-13" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-13"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-14" name="rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-14" href="posts/lab-2/#rest_code_fcd0de53c1c34b7ca7353493c9ed0b18-14"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.2_res.png" src="images/2.2_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данную работу, разбил основное выражение на несколько маленьких, после чего вычислил ответ.
+Организовал цикл и вывод результата после прохождения каждого нового значения через него.</p>
+</section><section id="section-3"><h2>Задание 3 (Вариант 9)</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Вычислить y при исходных n=25, x= -2.1 по формуле:</p>
+<img alt="../../images/2.3_q.png" src="images/2.3_q.png"><dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.3.png" src="images/2.3.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/2.3.pas.html">2.3.pas</a>  <a class="reference external" href="../listings/2.3.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-1" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-1" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-1"></a><span class="k">program</span> <span class="n">p3</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-2" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-2" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-2"></a><span class="k">var</span> <span class="n">i</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-3" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-3" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-3"></a><span class="n">y</span><span class="o">,</span><span class="n">pr</span><span class="o">,</span><span class="n">x</span><span class="o">,</span><span class="n">ch</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-4" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-4" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-4"></a><span class="k">begin</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-5" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-5" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-5"></a>    <span class="n">x</span><span class="o">:=</span><span class="mi">4</span><span class="o">*</span><span class="mf">2.1</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-6" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-6" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-6"></a>    <span class="n">y</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-7" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-7" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-7"></a>    <span class="n">pr</span><span class="o">:=</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-8" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-8" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-8"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">25</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-9" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-9" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-9"></a>        <span class="n">ch</span><span class="o">:=</span><span class="mi">1</span><span class="o">/</span><span class="n">i</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-10" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-10" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-10"></a>        <span class="n">pr</span><span class="o">:=</span><span class="n">pr</span><span class="o">*</span><span class="nb">exp</span><span class="p">(</span><span class="nb">ln</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">ch</span><span class="p">)</span><span class="o">*</span><span class="n">ch</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-11" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-11" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-11"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-12" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-12" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-12"></a>    <span class="n">y</span><span class="o">:=</span><span class="n">x</span><span class="o">+</span><span class="n">pr</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-13" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-13" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-13"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'y равен '</span><span class="o">,</span><span class="n">y</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_22c7e267f50a4df38d4651a0f31bca82-14" name="rest_code_22c7e267f50a4df38d4651a0f31bca82-14" href="posts/lab-2/#rest_code_22c7e267f50a4df38d4651a0f31bca82-14"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.3_res.png" src="images/2.3_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении задания совершил предварительные вычисления в цикле, а финальное - единожды.
+Также использовал при возведении в степень формулу с экспонентой и натуральным логарифмом для
+уменьшения времени работы программы.</p>
+</section><section id="section-4"><h2>Задание 4</h2>
+<p><strong>Постановка задачи:</strong></p>
+<img alt="../../images/2.4_q.png" src="images/2.4_q.png"><dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.4.png" src="images/2.4.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/2.4.pas.html">2.4.pas</a>  <a class="reference external" href="../listings/2.4.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-1" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-1" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-1"></a><span class="k">program</span> <span class="n">p4</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-2" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-2" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-2"></a><span class="k">var</span> <span class="n">n</span><span class="o">,</span><span class="n">i</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-3" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-3" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-3"></a><span class="n">y</span><span class="o">,</span><span class="n">V1</span><span class="o">,</span><span class="n">V2</span><span class="o">,</span><span class="n">ch1</span><span class="o">,</span><span class="n">ch2</span><span class="o">,</span><span class="n">zn1</span><span class="o">,</span><span class="n">zn2</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-4" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-4" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-4"></a><span class="k">begin</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-5" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-5" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-5"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите число n,большее,чем 2'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-6" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-6" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-6"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-7" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-7" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-7"></a>    <span class="n">ch1</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-8" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-8" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-8"></a>    <span class="n">zn2</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-9" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-9" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-9"></a>    <span class="n">ch2</span><span class="o">:=</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-10" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-10" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-10"></a>    <span class="n">zn1</span><span class="o">:=</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-11" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-11" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-11"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">2</span> <span class="k">to</span> <span class="n">n</span> <span class="k">do</span> <span class="k">begin</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-12" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-12" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-12"></a>        <span class="n">V1</span><span class="o">:=</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-13" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-13" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-13"></a>        <span class="n">V2</span><span class="o">:=</span><span class="n">i</span><span class="o">/</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-14" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-14" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-14"></a>        <span class="n">ch1</span><span class="o">:=</span><span class="n">ch1</span><span class="o">+</span><span class="n">V1</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-15" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-15" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-15"></a>        <span class="n">ch2</span><span class="o">:=</span><span class="n">ch2</span><span class="o">*</span><span class="n">V2</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-16" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-16" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-16"></a>        <span class="n">zn1</span><span class="o">:=</span><span class="n">zn1</span><span class="o">*</span><span class="n">V1</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-17" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-17" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-17"></a>        <span class="n">zn2</span><span class="o">:=</span><span class="n">zn2</span><span class="o">+</span><span class="n">V2</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-18" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-18" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-18"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-19" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-19" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-19"></a>    <span class="n">y</span><span class="o">:=</span><span class="p">(</span><span class="mi">3</span><span class="o">*</span><span class="n">ch1</span><span class="o">+</span><span class="n">ch2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">zn1</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">zn2</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-20" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-20" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-20"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'При n равном '</span><span class="o">,</span><span class="n">n</span><span class="o">,</span><span class="s">' y равен '</span><span class="o">,</span><span class="n">y</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-21" name="rest_code_24dd63a46bfd403ca5aa63fcedb6b879-21" href="posts/lab-2/#rest_code_24dd63a46bfd403ca5aa63fcedb6b879-21"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/2.4_res.png" src="images/2.4_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении задания разбил большое выражение на более малые для ускорения работы программы.
+Все предварительные вычисления производил в цикле, а финальное - единожды.</p>
+<p><strong>Вывод:</strong></p>
+<p>В ходе проделанной работы освоил способ реализации детерминированного циклического вычислительного процесса с управлением по аргументу.</p>
+</section>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/lab-1/" class="u-url">Лабораторная работа №1 “Линейные вычислительные процессы”</a></h1>
+                <div class="metadata">
+                    <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                        Eugene Savostin
+                    </span></p>
+            <p class="dateline">
+            <a href="posts/lab-1/" rel="bookmark">
+            <time class="published dt-published" datetime="2019-10-10T00:00:00+03:00" itemprop="datePublished" title="2019-10-10 00:00">2019-10-10 00:00</time></a>
+            </p>
+                </div>
+            </header><div class="e-content entry-content">
+                    <dl class="docinfo simple">
+<dt>Тема<span class="colon">:</span>
+</dt>
+<dd>
+<p>Линейные вычислительные процессы</p>
+</dd>
+<dt>Цель<span class="colon">:</span>
+</dt>
+<dd>
+<p>Реализовать линейный вычислительный процесс средствами PascalABC</p>
+</dd>
+<dt>Используемое оборудование<span class="colon">:</span>
+</dt>
+<dd>
+<p>ПК, среда программирования PascalABC</p>
+</dd>
+</dl>
+<section id="section-1"><h2>Задание 1</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Даны числа 7 и 5. Определить результат вещественного деления, целочисленного деления и найти остаток от целочисленного деления.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.1.png" src="images/1.1.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/1.1.pas.html">1.1.pas</a>  <a class="reference external" href="../listings/1.1.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_41393ecf85cd4a96922f767515d3cd40-1" name="rest_code_41393ecf85cd4a96922f767515d3cd40-1" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-1"></a><span class="k">program</span> <span class="n">p2</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-2" name="rest_code_41393ecf85cd4a96922f767515d3cd40-2" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-2"></a><span class="k">const</span> <span class="n">x</span><span class="o">=</span><span class="mi">7</span><span class="o">;</span><span class="n">y</span><span class="o">=</span><span class="mi">5</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-3" name="rest_code_41393ecf85cd4a96922f767515d3cd40-3" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-3"></a><span class="k">var</span> <span class="n">d</span><span class="o">,</span><span class="n">cel</span><span class="o">,</span><span class="n">ost</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-4" name="rest_code_41393ecf85cd4a96922f767515d3cd40-4" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-4"></a><span class="k">begin</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-5" name="rest_code_41393ecf85cd4a96922f767515d3cd40-5" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-5"></a>    <span class="n">d</span><span class="o">:=</span><span class="n">x</span><span class="o">/</span><span class="n">y</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-6" name="rest_code_41393ecf85cd4a96922f767515d3cd40-6" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-6"></a>    <span class="n">cel</span><span class="o">:=</span><span class="n">x</span> <span class="k">div</span> <span class="n">y</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-7" name="rest_code_41393ecf85cd4a96922f767515d3cd40-7" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-7"></a>    <span class="n">ost</span><span class="o">:=</span><span class="n">x</span> <span class="k">mod</span> <span class="n">y</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-8" name="rest_code_41393ecf85cd4a96922f767515d3cd40-8" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-8"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Частное равняется '</span><span class="o">,</span> <span class="n">d</span><span class="o">:</span><span class="mi">2</span><span class="o">:</span><span class="mi">1</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-9" name="rest_code_41393ecf85cd4a96922f767515d3cd40-9" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-9"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Целочисленная часть равняется '</span><span class="o">,</span> <span class="n">cel</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-10" name="rest_code_41393ecf85cd4a96922f767515d3cd40-10" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-10"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Остаток равняется '</span><span class="o">,</span> <span class="n">ost</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_41393ecf85cd4a96922f767515d3cd40-11" name="rest_code_41393ecf85cd4a96922f767515d3cd40-11" href="posts/lab-1/#rest_code_41393ecf85cd4a96922f767515d3cd40-11"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.1_res.png" src="images/1.1_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя задание применил такие операции, как / - вещественное деление, div - целочисленное деление и mod - нахождение остатка от целочисленного деления.</p>
+</section><section id="section-2"><h2>Задание 2</h2>
+<p><strong>Постановка задачи:</strong></p>
+<img alt="../../images/1.2_q.png" src="images/1.2_q.png"><dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.2.png" src="images/1.2.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/1.2.pas.html">1.2.pas</a>  <a class="reference external" href="../listings/1.2.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_9b17c38d3f5142f78691015540691636-1" name="rest_code_9b17c38d3f5142f78691015540691636-1" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-1"></a><span class="k">program</span> <span class="n">p2</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-2" name="rest_code_9b17c38d3f5142f78691015540691636-2" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-2"></a><span class="k">var</span> <span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">u</span><span class="o">,</span><span class="n">sinus</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-3" name="rest_code_9b17c38d3f5142f78691015540691636-3" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-3"></a><span class="k">begin</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-4" name="rest_code_9b17c38d3f5142f78691015540691636-4" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-4"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите последовательно значения x и y'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-5" name="rest_code_9b17c38d3f5142f78691015540691636-5" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-5"></a>  <span class="nb">readln</span><span class="p">(</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-6" name="rest_code_9b17c38d3f5142f78691015540691636-6" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-6"></a>  <span class="n">sinus</span><span class="o">:=</span><span class="nb">sin</span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="nb">Pi</span><span class="o">/</span><span class="mi">180</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="nb">Pi</span><span class="o">/</span><span class="mi">180</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-7" name="rest_code_9b17c38d3f5142f78691015540691636-7" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-7"></a>  <span class="n">u</span><span class="o">:=</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">sinus</span><span class="o">*</span><span class="n">sinus</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">x</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="nb">abs</span><span class="p">(</span><span class="n">sinus</span><span class="p">))))</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-8" name="rest_code_9b17c38d3f5142f78691015540691636-8" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-8"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Значение u равно '</span><span class="o">,</span><span class="n">u</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="mi">2</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_9b17c38d3f5142f78691015540691636-9" name="rest_code_9b17c38d3f5142f78691015540691636-9" href="posts/lab-1/#rest_code_9b17c38d3f5142f78691015540691636-9"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.2_res.png" src="images/1.2_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данную работу, я упрощал большое выражение, превратив значение синуса в просто число заранее,
+чтобы ускорить процесс расчета. Также, для удобства при использовании, сократил количество знаков после запятой до двух.</p>
+</section><section id="section-3"><h2>Задание 3</h2>
+<p><strong>Постановка задачи:</strong></p>
+<img alt="../../images/1.3_q.png" src="images/1.3_q.png"><dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.3.png" src="images/1.3.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/1.3.pas.html">1.3.pas</a>  <a class="reference external" href="../listings/1.3.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_625b14c9809e49c1b417d345c507b030-1" name="rest_code_625b14c9809e49c1b417d345c507b030-1" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-1"></a><span class="k">program</span> <span class="n">p3</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-2" name="rest_code_625b14c9809e49c1b417d345c507b030-2" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-2"></a><span class="k">var</span> <span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-3" name="rest_code_625b14c9809e49c1b417d345c507b030-3" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-3"></a><span class="n">m</span><span class="o">,</span><span class="n">raznost</span><span class="o">,</span><span class="n">chis</span><span class="o">,</span><span class="n">znam</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-4" name="rest_code_625b14c9809e49c1b417d345c507b030-4" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-4"></a><span class="k">begin</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-5" name="rest_code_625b14c9809e49c1b417d345c507b030-5" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-5"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите значение х'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-6" name="rest_code_625b14c9809e49c1b417d345c507b030-6" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-6"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-7" name="rest_code_625b14c9809e49c1b417d345c507b030-7" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-7"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите значение у'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-8" name="rest_code_625b14c9809e49c1b417d345c507b030-8" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-8"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">y</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-9" name="rest_code_625b14c9809e49c1b417d345c507b030-9" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-9"></a>    <span class="n">raznost</span><span class="o">:=</span><span class="n">y</span><span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-10" name="rest_code_625b14c9809e49c1b417d345c507b030-10" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-10"></a>    <span class="n">chis</span><span class="o">:=</span><span class="mi">3</span><span class="o">+</span><span class="nb">exp</span><span class="p">(</span><span class="nb">ln</span><span class="p">(</span><span class="mf">2.7</span><span class="p">)</span><span class="o">*</span><span class="n">raznost</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-11" name="rest_code_625b14c9809e49c1b417d345c507b030-11" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-11"></a>    <span class="n">znam</span><span class="o">:=</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="nb">exp</span><span class="p">(</span><span class="nb">ln</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">raznost</span><span class="p">)</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">raznost</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="nb">tan</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-12" name="rest_code_625b14c9809e49c1b417d345c507b030-12" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-12"></a>    <span class="n">m</span><span class="o">:=</span><span class="n">chis</span><span class="o">/</span><span class="n">znam</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-13" name="rest_code_625b14c9809e49c1b417d345c507b030-13" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-13"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Значение m равняется '</span><span class="o">,</span><span class="n">m</span><span class="o">:</span><span class="mi">5</span><span class="o">:</span><span class="mi">2</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_625b14c9809e49c1b417d345c507b030-14" name="rest_code_625b14c9809e49c1b417d345c507b030-14" href="posts/lab-1/#rest_code_625b14c9809e49c1b417d345c507b030-14"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.3_res.png" src="images/1.3_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данное задание, я разложил большое выражение на несколько более мелких и простых,
+дабы упростить и ускорить процесс расчета, а также узнал, как в среде PascalABC возводить в степень,
+которая состоит из переменных. Для удобства при использовании сократил число знаков после запятой в ответе до двух.</p>
+</section><section id="section-4"><h2>Задание 4</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>С клавиатуры вводится трехзначное число. Вычислить сумму его цифр.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.4.png" src="images/1.4.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/1.4.pas.html">1.4.pas</a>  <a class="reference external" href="../listings/1.4.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-1" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-1" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-1"></a><span class="k">program</span> <span class="n">p4</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-2" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-2" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-2"></a><span class="k">var</span> <span class="n">r</span><span class="o">,</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">z</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-3" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-3" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-3"></a><span class="n">m</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-4" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-4" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-4"></a><span class="k">begin</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-5" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-5" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-5"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите трехзначное число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-6" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-6" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-6"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-7" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-7" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-7"></a>    <span class="n">x</span><span class="o">:=</span><span class="n">r</span> <span class="k">div</span> <span class="mi">100</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-8" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-8" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-8"></a>    <span class="n">y</span><span class="o">:=</span><span class="n">r</span> <span class="k">mod</span> <span class="mi">100</span> <span class="k">div</span> <span class="mi">10</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-9" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-9" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-9"></a>    <span class="n">z</span><span class="o">:=</span><span class="n">r</span> <span class="k">mod</span> <span class="mi">10</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-10" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-10" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-10"></a>    <span class="n">m</span><span class="o">:=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">+</span><span class="n">z</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-11" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-11" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-11"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Сумма цифр числа равна '</span><span class="o">,</span><span class="n">m</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-12" name="rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-12" href="posts/lab-1/#rest_code_41f9d8ff1ae641c8b47ed4622e74cb8c-12"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.4_res.png" src="images/1.4_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<dl class="simple">
+<dt>Выполняя данное задание, применил такие действия над значениями, как div - целочисленное деление и</dt>
+<dd>
+<p>mod - нахождение остатка от целочисленного деления, и комбинировал их.</p>
+</dd>
+</dl></section><section id="section-5"><h2>Задание 5</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Ввести трехзначное число а. Поменять крайние цифры числа местами.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.5.png" src="images/1.5.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/1.5.pas.html">1.5.pas</a>  <a class="reference external" href="../listings/1.5.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-1" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-1" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-1"></a><span class="k">program</span> <span class="n">p5</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-2" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-2" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-2"></a><span class="k">var</span> <span class="n">a</span><span class="o">,</span><span class="n">x</span><span class="o">,</span><span class="n">y</span><span class="o">,</span><span class="n">z</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-3" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-3" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-3"></a><span class="k">begin</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-4" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-4" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-4"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите исходное трехзначное число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-5" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-5" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-5"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-6" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-6" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-6"></a>    <span class="n">x</span><span class="o">:=</span><span class="n">a</span> <span class="k">div</span> <span class="mi">100</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-7" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-7" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-7"></a>    <span class="n">y</span><span class="o">:=</span><span class="n">a</span> <span class="k">mod</span> <span class="mi">100</span> <span class="k">div</span> <span class="mi">10</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-8" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-8" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-8"></a>    <span class="n">z</span><span class="o">:=</span><span class="n">a</span> <span class="k">mod</span> <span class="mi">10</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-9" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-9" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-9"></a>    <span class="n">a</span><span class="o">:=</span><span class="n">z</span><span class="o">*</span><span class="mi">100</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">x</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-10" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-10" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-10"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Получилось число '</span><span class="o">,</span> <span class="n">a</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_13c9b9ed92b14008ab869f8247f84e8d-11" name="rest_code_13c9b9ed92b14008ab869f8247f84e8d-11" href="posts/lab-1/#rest_code_13c9b9ed92b14008ab869f8247f84e8d-11"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.5_res.png" src="images/1.5_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данное задание, применил такие действия над значениями, как div - целочисленное деление
+и mod - нахождение остатка от деления, а затем из полученных результатов скомбинировал новое число, как гласило задание.</p>
+</section><section id="section-6"><h2>Задание 6</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Выяснить, на каком этаже, в каком подъезде 9-этажного дома живет друг, если известен номер его квартиры, а так;е,
+что на каждом этаже располагается 4 квартиры. Номер интересующей нас квартиры вводится с клавиатуры. Вывести
+номер подъезда и номер этажа, на котором живет друг.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.6.png" src="images/1.6.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../listings/1.6.pas.html">1.6.pas</a>  <a class="reference external" href="../listings/1.6.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-1" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-1" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-1"></a><span class="k">program</span> <span class="n">r6</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-2" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-2" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-2"></a><span class="k">var</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-3" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-3" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-3"></a><span class="n">x</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">:</span> <span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-4" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-4" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-4"></a><span class="k">begin</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-5" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-5" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-5"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите номер квартиры'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-6" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-6" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-6"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-7" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-7" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-7"></a>    <span class="n">i</span><span class="o">:=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">div</span> <span class="mi">36</span> <span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-8" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-8" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-8"></a>    <span class="n">j</span><span class="o">:=</span><span class="p">((</span><span class="n">x</span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="mi">36</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="k">div</span> <span class="mi">4</span> <span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-9" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-9" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-9"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Подъезд '</span><span class="o">,</span> <span class="n">i</span><span class="o">,</span> <span class="s">', этаж '</span><span class="o">,</span> <span class="n">j</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_047e944dd0ca4bd1bd71f3722b09908c-10" name="rest_code_047e944dd0ca4bd1bd71f3722b09908c-10" href="posts/lab-1/#rest_code_047e944dd0ca4bd1bd71f3722b09908c-10"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/1.6_res.png" src="images/1.6_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>В ходе выполнения работы был создан алгоритм, который способен по номеру квартиры
+вычислить ее точное местоположение. А именно: номер подъезда и номер этажа.</p>
+<p><strong>Вывод:</strong></p>
+<p>В ходе выполнения лабораторной работы я научился работать с линейными вычислительными процессами при помощи
+различных действий над данными, а именно: сложения, вычитания, целочисленного деления, умножения, вещественного
+деления, вычисления остатка от деления и возведения в степень. Для ускорения работы программы я разбивал
+большие модули выражений на более простые и емкие.</p>
+</section>
+</div>
+            </article><article class="h-entry post-text" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title"><a href="posts/welcome-to-portfolio/" class="u-url">Welcome to my portfolio</a></h1>
                 <div class="metadata">
                     <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                         Eugene Savostin

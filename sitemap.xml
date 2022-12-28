@@ -23,11 +23,11 @@
  </url>
  <url>
   <loc>https://savostin-portfolio.com/archive.html</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/categories/</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/categories/1st-grade/</loc>
@@ -40,6 +40,10 @@
  <url>
   <loc>https://savostin-portfolio.com/categories/computer-science/</loc>
   <lastmod>2022-12-27T12:50:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/categories/iw/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/categories/lab/</loc>
@@ -63,11 +67,11 @@
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/archive.html</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/categories/</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/categories/1st-grade/</loc>
@@ -80,6 +84,10 @@
  <url>
   <loc>https://savostin-portfolio.com/en/categories/computer-science/</loc>
   <lastmod>2022-12-27T13:08:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/categories/iw/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/categories/lab/</loc>
@@ -95,7 +103,7 @@
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/index-1.html</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/pages/about-nikola/</loc>
@@ -165,12 +173,41 @@
  <url>
   <loc>https://savostin-portfolio.com/en/posts/10th_lab/</loc>
   <lastmod>2022-12-28T15:04:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/10th_lab/" />
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/posts/iw-1/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/iw-1/" />
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/posts/iw-2/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/iw-2/" />
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/posts/iw-8/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/iw-8/" />
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/posts/lab-1/</loc>
   <lastmod>2022-12-27T13:08:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/lab-1/" />
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/posts/lab-10/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/lab-10/" />
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/posts/lab-11/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/lab-11/" />
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/en/posts/lab-12/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://savostin-portfolio.com/posts/lab-12/" />
  </url>
  <url>
   <loc>https://savostin-portfolio.com/en/posts/lab-2/</loc>
@@ -223,15 +260,15 @@
  </url>
  <url>
   <loc>https://savostin-portfolio.com/galleries/demo/</loc>
-  <lastmod>2022-12-27T09:36:00Z</lastmod>
+  <lastmod>2022-12-28T15:18:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/index-1.html</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/listings/</loc>
-  <lastmod>2022-12-28T15:04:00Z</lastmod>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/listings/1.1.pas.html</loc>
@@ -256,6 +293,42 @@
  <url>
   <loc>https://savostin-portfolio.com/listings/1.6.pas.html</loc>
   <lastmod>2022-12-27T16:14:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/10.1.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/10.2.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/10.3.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/11.1.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/11.2.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/11.3.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/12.1.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/12.2.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/12.3.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/listings/2.1.pas.html</loc>
@@ -362,6 +435,18 @@
   <lastmod>2022-12-28T14:54:00Z</lastmod>
  </url>
  <url>
+  <loc>https://savostin-portfolio.com/listings/9.2.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/9.3.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/listings/9.4.pas.html</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://savostin-portfolio.com/listings/__pycache__/</loc>
   <lastmod>2022-12-27T09:36:00Z</lastmod>
  </url>
@@ -422,8 +507,32 @@
   <lastmod>2022-12-28T15:04:00Z</lastmod>
  </url>
  <url>
+  <loc>https://savostin-portfolio.com/posts/iw-1/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/posts/iw-2/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/posts/iw-8/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
   <loc>https://savostin-portfolio.com/posts/lab-1/</loc>
   <lastmod>2022-12-27T15:27:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/posts/lab-10/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/posts/lab-11/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://savostin-portfolio.com/posts/lab-12/</loc>
+  <lastmod>2022-12-28T17:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://savostin-portfolio.com/posts/lab-2/</loc>

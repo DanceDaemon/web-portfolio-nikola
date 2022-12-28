@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Student Web-portfolio (Posts about iw)</title><link>https://savostin-portfolio.com/</link><description></description><atom:link href="https://savostin-portfolio.com/en/categories/iw.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2022 &lt;a href="mailto:ddaemon12@gmail.com"&gt;Eugene Savostin&lt;/a&gt; </copyright><lastBuildDate>Wed, 28 Dec 2022 17:52:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Самостоятельная работа 8</title><link>https://savostin-portfolio.com/en/posts/iw-8/</link><dc:creator>Eugene Savostin</dc:creator><description>&lt;dl class="docinfo simple"&gt;
+&lt;dt&gt;Задание&lt;span class="colon"&gt;:&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Составить список платформ по изучению программирования&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;img alt="../../images/iw-8.1.png" src="https://savostin-portfolio.com/en/images/iw-8.1.png"&gt;
+&lt;img alt="../../images/iw-8.2.png" src="https://savostin-portfolio.com/en/images/iw-8.2.png"&gt;</description><guid>https://savostin-portfolio.com/en/posts/iw-8/</guid><pubDate>Wed, 11 Dec 2019 21:00:00 GMT</pubDate></item><item><title>Самостоятельная работа 1</title><link>https://savostin-portfolio.com/en/posts/iw-1/</link><dc:creator>Eugene Savostin</dc:creator><description>&lt;img alt="../../images/iw-1.png" src="https://savostin-portfolio.com/en/images/iw-1.png"&gt;</description><guid>https://savostin-portfolio.com/en/posts/iw-1/</guid><pubDate>Sun, 03 Nov 2019 21:00:00 GMT</pubDate></item><item><title>Самостоятельная работа 2</title><link>https://savostin-portfolio.com/en/posts/iw-2/</link><dc:creator>Eugene Savostin</dc:creator><description>&lt;dl class="docinfo simple"&gt;
+&lt;dt&gt;Задание&lt;span class="colon"&gt;:&lt;/span&gt;&lt;/dt&gt;
+&lt;dd&gt;&lt;p&gt;Составить список электронных музеев ЭВМ&lt;/p&gt;
+&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;img alt="../../images/iw-2.1.png" src="https://savostin-portfolio.com/en/images/iw-2.1.png"&gt;
+&lt;img alt="../../images/iw-2.2.png" src="https://savostin-portfolio.com/en/images/iw-2.2.png"&gt;</description><guid>https://savostin-portfolio.com/en/posts/iw-2/</guid><pubDate>Sat, 19 Oct 2019 21:00:00 GMT</pubDate></item></channel></rss>

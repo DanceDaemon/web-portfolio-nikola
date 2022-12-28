@@ -13,7 +13,7 @@
 <link rel="canonical" href="https://savostin-portfolio.com/en/posts/lab-9/">
 <!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Eugene Savostin">
 <link rel="prev" href="../lab-8/" title='Лабораторная работа №8 "Итерационные циклические вычислительные процессы с управлением по индексу/аргументу и функции"' type="text/html">
-<link rel="next" href="../10th_lab/" title="10th_lab" type="text/html">
+<link rel="next" href="../iw-8/" title="Самостоятельная работа 8" type="text/html">
 <meta property="og:site_name" content="Student Web-portfolio">
 <meta property="og:title" content='Лабораторная работа №9 "Разветвляющиеся вычислительные процессы. Опера'>
 <meta property="og:url" content="https://savostin-portfolio.com/en/posts/lab-9/">
@@ -139,16 +139,16 @@
 <dd><p></p></dd>
 </dl>
 <p><a class="reference external" href="../../../listings/9.1.pas.html">9.1.pas</a>  <a class="reference external" href="../../../listings/9.1.pas">(Источник)</a></p>
-<div class="code"><pre class="code pascal"><a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-1" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-1" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-1"></a><span class="k">program</span> <span class="n">z1</span><span class="o">;</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-2" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-2" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-2"></a><span class="k">var</span> <span class="n">n</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-3" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-3" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-3"></a><span class="k">begin</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-4" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-4" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-4"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите пятизначное число'</span><span class="p">)</span><span class="o">;</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-5" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-5" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-5"></a>  <span class="nb">readln</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-6" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-6" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-6"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="k">div</span> <span class="mi">10000</span> <span class="o">=</span> <span class="n">n</span> <span class="k">mod</span> <span class="mi">10</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">n</span> <span class="k">div</span> <span class="mi">1000</span> <span class="k">mod</span> <span class="mi">10</span> <span class="o">=</span> <span class="n">n</span> <span class="k">mod</span> <span class="mi">100</span> <span class="k">div</span> <span class="mi">10</span><span class="p">)</span> <span class="k">then</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-7" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-7" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-7"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Палиндром'</span><span class="p">)</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-8" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-8" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-8"></a>  <span class="k">else</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-9" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-9" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-9"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Не палиндром'</span><span class="p">)</span><span class="o">;</span>
-<a id="rest_code_fc658c27f27e48a4b1af090f99b5678a-10" name="rest_code_fc658c27f27e48a4b1af090f99b5678a-10" href="#rest_code_fc658c27f27e48a4b1af090f99b5678a-10"></a><span class="k">end</span><span class="o">.</span>
+<div class="code"><pre class="code pascal"><a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-1" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-1" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-1"></a><span class="k">program</span> <span class="n">z1</span><span class="o">;</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-2" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-2" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-2"></a><span class="k">var</span> <span class="n">n</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-3" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-3" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-3"></a><span class="k">begin</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-4" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-4" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-4"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите пятизначное число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-5" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-5" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-5"></a>  <span class="nb">readln</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-6" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-6" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-6"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">n</span> <span class="k">div</span> <span class="mi">10000</span> <span class="o">=</span> <span class="n">n</span> <span class="k">mod</span> <span class="mi">10</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">n</span> <span class="k">div</span> <span class="mi">1000</span> <span class="k">mod</span> <span class="mi">10</span> <span class="o">=</span> <span class="n">n</span> <span class="k">mod</span> <span class="mi">100</span> <span class="k">div</span> <span class="mi">10</span><span class="p">)</span> <span class="k">then</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-7" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-7" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-7"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Палиндром'</span><span class="p">)</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-8" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-8" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-8"></a>  <span class="k">else</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-9" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-9" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-9"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Не палиндром'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_0cc8af5df5694ee48f1677010ed873f0-10" name="rest_code_0cc8af5df5694ee48f1677010ed873f0-10" href="#rest_code_0cc8af5df5694ee48f1677010ed873f0-10"></a><span class="k">end</span><span class="o">.</span>
 </pre></div>
 <dl class="field-list simple">
 <dt>Результат работы<span class="colon">:</span>
@@ -156,7 +156,117 @@
 <dd><p></p></dd>
 </dl>
 <img alt="../../images/9.1_res.png" src="../../images/9.1_res.png"><p><strong>Анализ полученных результатов:</strong></p>
-<p>Для выполнения данного задания я использовал оператор “while”. Условие выхода из цикла U1-U&lt;=eps, где eps - заданная точность вычислений.</p>
+<p>В данной работе я использовал связку операторов выбора “if/else”, чтобы добиться от программы анализа числа и сравнения его с палиндромами.</p>
+</section><section id="section-2"><h2>Задание 2</h2>
+<p><strong>Постановка задачи:</strong></p>
+<img alt="../../images/9.2_q.png" src="../../images/9.2_q.png"><dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/9.2.png" src="../../images/9.2.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../../../listings/9.2.pas.html">9.2.pas</a>  <a class="reference external" href="../../../listings/9.2.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_c5340b0a71d947b9975e12e46eda8458-1" name="rest_code_c5340b0a71d947b9975e12e46eda8458-1" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-1"></a><span class="k">program</span> <span class="n">z2</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-2" name="rest_code_c5340b0a71d947b9975e12e46eda8458-2" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-2"></a><span class="k">const</span> <span class="n">l</span><span class="o">=</span><span class="mf">0.1</span><span class="o">;</span> <span class="n">D</span><span class="o">=</span><span class="mi">30</span><span class="o">*</span><span class="nb">Pi</span><span class="o">/</span><span class="mi">180</span><span class="o">;</span><span class="n">fi</span><span class="o">=</span><span class="mi">45</span><span class="o">*</span><span class="nb">Pi</span><span class="o">/</span><span class="mi">180</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-3" name="rest_code_c5340b0a71d947b9975e12e46eda8458-3" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-3"></a><span class="k">var</span> <span class="n">A</span><span class="o">,</span><span class="n">sinus</span><span class="o">,</span><span class="n">cosin</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-4" name="rest_code_c5340b0a71d947b9975e12e46eda8458-4" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-4"></a><span class="k">begin</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-5" name="rest_code_c5340b0a71d947b9975e12e46eda8458-5" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-5"></a>  <span class="n">A</span><span class="o">:=</span><span class="nb">arcsin</span><span class="p">(</span><span class="nb">cos</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="nb">sin</span><span class="p">(</span><span class="n">D</span><span class="p">))</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-6" name="rest_code_c5340b0a71d947b9975e12e46eda8458-6" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-6"></a>  <span class="n">cosin</span><span class="o">:=</span><span class="p">(</span><span class="nb">sin</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span><span class="o">-</span><span class="nb">sin</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span><span class="o">*</span><span class="nb">cos</span><span class="p">(</span><span class="n">D</span><span class="p">))</span><span class="o">/</span><span class="nb">cos</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span><span class="o">/</span><span class="nb">sin</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-7" name="rest_code_c5340b0a71d947b9975e12e46eda8458-7" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-7"></a>  <span class="n">sinus</span><span class="o">:=</span><span class="nb">cos</span><span class="p">(</span><span class="n">fi</span><span class="p">)</span><span class="o">*</span><span class="nb">sin</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">/</span><span class="nb">sin</span><span class="p">(</span><span class="n">D</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-8" name="rest_code_c5340b0a71d947b9975e12e46eda8458-8" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-8"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">sinus</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">cosin</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">,</span><span class="s">' - Угол азимута находится в первой четверти'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-9" name="rest_code_c5340b0a71d947b9975e12e46eda8458-9" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-9"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">sinus</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">cosin</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="nb">Pi</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">,</span><span class="s">' - Угол азимута находится во второй четверти'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-10" name="rest_code_c5340b0a71d947b9975e12e46eda8458-10" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-10"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">sinus</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">cosin</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="nb">Pi</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">,</span><span class="s">' - Угол азимута находится в третьей четверти'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-11" name="rest_code_c5340b0a71d947b9975e12e46eda8458-11" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-11"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">sinus</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">cosin</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="nb">Pi</span><span class="o">-</span><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">,</span><span class="s">' - Угол азимута находится в четвертой четверти'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_c5340b0a71d947b9975e12e46eda8458-12" name="rest_code_c5340b0a71d947b9975e12e46eda8458-12" href="#rest_code_c5340b0a71d947b9975e12e46eda8458-12"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/9.2_res.png" src="../../images/9.2_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении данной работы я обращался к оператору выбора “if”, чтобы организовать выполнение программой анализа полученных из вычислений данных.</p>
+</section><section id="section-3"><h2>Задание 3</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>"Угадай число". Составить программу, которая бы случайным образом загадывала число от 1 до 100, и предлагала Вам его угадать.
+При неправильном ответе, программа должна выводить сообщение о том, больше загаданное число или меньше. В случае победы выводится поздравление.
+Программа дает возможность вводить число до тех пор, пока пользователь не угадает.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/9.3.png" src="../../images/9.3.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../../../listings/9.3.pas.html">9.3.pas</a>  <a class="reference external" href="../../../listings/9.3.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_cca5478a018241198a0920d31570eefd-1" name="rest_code_cca5478a018241198a0920d31570eefd-1" href="#rest_code_cca5478a018241198a0920d31570eefd-1"></a><span class="k">program</span> <span class="n">z3</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-2" name="rest_code_cca5478a018241198a0920d31570eefd-2" href="#rest_code_cca5478a018241198a0920d31570eefd-2"></a><span class="k">var</span> <span class="n">x</span><span class="o">,</span><span class="n">n</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-3" name="rest_code_cca5478a018241198a0920d31570eefd-3" href="#rest_code_cca5478a018241198a0920d31570eefd-3"></a><span class="k">begin</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-4" name="rest_code_cca5478a018241198a0920d31570eefd-4" href="#rest_code_cca5478a018241198a0920d31570eefd-4"></a>  <span class="nb">randomize</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-5" name="rest_code_cca5478a018241198a0920d31570eefd-5" href="#rest_code_cca5478a018241198a0920d31570eefd-5"></a>  <span class="n">x</span><span class="o">:=</span><span class="nb">random</span><span class="p">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">100</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-6" name="rest_code_cca5478a018241198a0920d31570eefd-6" href="#rest_code_cca5478a018241198a0920d31570eefd-6"></a>  <span class="n">n</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-7" name="rest_code_cca5478a018241198a0920d31570eefd-7" href="#rest_code_cca5478a018241198a0920d31570eefd-7"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите число от 1 до 100'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-8" name="rest_code_cca5478a018241198a0920d31570eefd-8" href="#rest_code_cca5478a018241198a0920d31570eefd-8"></a>  <span class="k">repeat</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-9" name="rest_code_cca5478a018241198a0920d31570eefd-9" href="#rest_code_cca5478a018241198a0920d31570eefd-9"></a>    <span class="nb">readln</span> <span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-10" name="rest_code_cca5478a018241198a0920d31570eefd-10" href="#rest_code_cca5478a018241198a0920d31570eefd-10"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Число не является верным, введите большее число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-11" name="rest_code_cca5478a018241198a0920d31570eefd-11" href="#rest_code_cca5478a018241198a0920d31570eefd-11"></a>    <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="n">x</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Число не является верным, введите меньшее число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-12" name="rest_code_cca5478a018241198a0920d31570eefd-12" href="#rest_code_cca5478a018241198a0920d31570eefd-12"></a>  <span class="k">until</span> <span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">x</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-13" name="rest_code_cca5478a018241198a0920d31570eefd-13" href="#rest_code_cca5478a018241198a0920d31570eefd-13"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Поздравляю, вы ввели верное число '</span><span class="o">,</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_cca5478a018241198a0920d31570eefd-14" name="rest_code_cca5478a018241198a0920d31570eefd-14" href="#rest_code_cca5478a018241198a0920d31570eefd-14"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/9.3_res.png" src="../../images/9.3_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении работы, я использовал оператор “random”, чтобы программа задавала случайное число; “repeat..until” для
+создания цикла угадывания. Все элементы типа “integer”, чтобы программа не могла задать дробное число.</p>
+</section><section id="section-4"><h2>Задание 4</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Сформировать вывод слова "ворона" в зависимости от любого числительного, которое вводится с клавиатуры. Например, 1 - ворона, 3 - вороны, 5 - ворон</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/9.4.png" src="../../images/9.4.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../../../listings/9.4.pas.html">9.4.pas</a>  <a class="reference external" href="../../../listings/9.4.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_b6b057d074444b938ef53d0c800d2a87-1" name="rest_code_b6b057d074444b938ef53d0c800d2a87-1" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-1"></a><span class="k">program</span> <span class="n">z4</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-2" name="rest_code_b6b057d074444b938ef53d0c800d2a87-2" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-2"></a><span class="k">var</span> <span class="n">x</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-3" name="rest_code_b6b057d074444b938ef53d0c800d2a87-3" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-3"></a><span class="k">begin</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-4" name="rest_code_b6b057d074444b938ef53d0c800d2a87-4" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-4"></a>  <span class="nb">writeln</span> <span class="p">(</span><span class="s">'Введите количество ворон'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-5" name="rest_code_b6b057d074444b938ef53d0c800d2a87-5" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-5"></a>  <span class="nb">readln</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-6" name="rest_code_b6b057d074444b938ef53d0c800d2a87-6" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-6"></a>  <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="k">mod</span> <span class="mi">100</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span> <span class="k">and</span> <span class="p">(</span><span class="n">x</span> <span class="k">mod</span> <span class="mi">100</span> <span class="o">&lt;</span> <span class="mi">15</span><span class="p">)</span> <span class="k">then</span> <span class="nb">writeln</span> <span class="p">(</span><span class="n">x</span><span class="o">,</span> <span class="s">' ворон'</span><span class="p">)</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-7" name="rest_code_b6b057d074444b938ef53d0c800d2a87-7" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-7"></a>  <span class="k">else</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-8" name="rest_code_b6b057d074444b938ef53d0c800d2a87-8" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-8"></a>  <span class="k">case</span> <span class="n">x</span> <span class="k">mod</span> <span class="mi">10</span> <span class="k">of</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-9" name="rest_code_b6b057d074444b938ef53d0c800d2a87-9" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-9"></a>    <span class="mi">1</span><span class="o">:</span> <span class="nb">writeln</span> <span class="p">(</span><span class="n">x</span><span class="o">,</span> <span class="s">' ворона'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-10" name="rest_code_b6b057d074444b938ef53d0c800d2a87-10" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-10"></a>    <span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">,</span><span class="mi">4</span><span class="o">:</span> <span class="nb">writeln</span> <span class="p">(</span><span class="n">x</span><span class="o">,</span> <span class="s">' вороны'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-11" name="rest_code_b6b057d074444b938ef53d0c800d2a87-11" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-11"></a>    <span class="k">else</span> <span class="nb">writeln</span> <span class="p">(</span><span class="n">x</span><span class="o">,</span> <span class="s">' ворон'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-12" name="rest_code_b6b057d074444b938ef53d0c800d2a87-12" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-12"></a>  <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_b6b057d074444b938ef53d0c800d2a87-13" name="rest_code_b6b057d074444b938ef53d0c800d2a87-13" href="#rest_code_b6b057d074444b938ef53d0c800d2a87-13"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/9.4_res.png" src="../../images/9.4_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>Выполняя данную работу, я использовал операторы “if..else” и “case”, чтобы добавить вариативности выводам,
+которыми программа может оперировать после анализа вводимых данных.</p>
+<p><strong>Вывод:</strong></p>
+<p>Операторы выбора значительно добавляют вариативности выводов программе и при этом достаточно несложные для освоения.</p>
 </section>
 </div>
     <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
@@ -169,7 +279,7 @@
                 <a href="../lab-8/" rel="prev" title='Лабораторная работа №8 "Итерационные циклические вычислительные процессы с управлением по индексу/аргументу и функции"'>Previous post</a>
             </li>
             <li class="next">
-                <a href="../10th_lab/" rel="next" title="10th_lab">Next post</a>
+                <a href="../iw-8/" rel="next" title="Самостоятельная работа 8">Next post</a>
             </li>
         </ul></nav></aside></article><!--End of body content--><footer id="footer">
             Contents © 2022         <a href="mailto:ddaemon12@gmail.com">Eugene Savostin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         

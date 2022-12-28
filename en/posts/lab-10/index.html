@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# " lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лабораторная работа №10 "Вариационный ряд" | Student Web-portfolio</title>
+<link href="../../../assets/css/all-nocdn.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
+<meta name="theme-color" content="#5670d4">
+<meta name="generator" content="Nikola (getnikola.com)">
+<link rel="alternate" type="application/rss+xml" title="RSS (en)" hreflang="en" href="../../rss.xml">
+<link rel="alternate" type="application/rss+xml" title="RSS (ru)" hreflang="ru" href="../../../rss.xml">
+<link rel="canonical" href="https://savostin-portfolio.com/en/posts/lab-10/">
+<!--[if lt IE 9]><script src="../../../../assets/js/html5.js"></script><![endif]--><meta name="author" content="Eugene Savostin">
+<link rel="prev" href="../iw-8/" title="Самостоятельная работа 8" type="text/html">
+<link rel="next" href="../lab-11/" title='Лабораторная работа №11 "Комбинированные вычислительные процессы"' type="text/html">
+<meta property="og:site_name" content="Student Web-portfolio">
+<meta property="og:title" content='Лабораторная работа №10 "Вариационный ряд"'>
+<meta property="og:url" content="https://savostin-portfolio.com/en/posts/lab-10/">
+<meta property="og:description" content="Тема:
+Вариационный ряд
+
+Цель:
+Научиться организовывать вычисления при помощи вариационного ряда
+
+Используемое оборудование:
+ПК, среда программирования PascalABC
+
+
+
+Задание 1
+Постановка задачи:
+Дан одн">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2019-12-15T00:00:00+03:00">
+<meta property="article:tag" content="1st-grade">
+<meta property="article:tag" content="computer-science">
+<meta property="article:tag" content="lab">
+<link rel="alternate" hreflang="ru" href="../../../posts/lab-10/">
+</head>
+<body>
+<a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
+
+<!-- Header and menu bar -->
+<div class="container">
+      <header class="blog-header py-3"><div class="row nbb-header align-items-center">
+          <div class="col-md-3 col-xs-2 col-sm-2" style="width: auto;">
+            <button class="navbar-toggler navbar-light bg-light nbb-navbar-toggler" type="button" data-toggle="collapse" data-target=".bs-nav-collapsible" aria-controls="bs-navbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse bs-nav-collapsible bootblog4-search-form-holder">
+                
+            </div>
+        </div>
+          <div class="col-md-6 col-xs-10 col-sm-10 bootblog4-brand" style="width: auto;">
+            <a class="navbar-brand blog-header-logo text-dark" href="../../">
+
+            <span id="blog-title">Student Web-portfolio</span>
+        </a>
+          </div>
+            <div class="col-md-3 justify-content-end align-items-center bs-nav-collapsible collapse flex-collapse bootblog4-right-nav">
+            <nav class="navbar navbar-light bg-white"><ul class="navbar-nav bootblog4-right-nav">
+<li class="nav-item"><a href="../../../" rel="alternate" hreflang="ru" class="nav-link">Русский</a></li>
+
+                    
+                    
+    
+    <li class="nav-item">
+    <a href="index.rst" id="sourcelink" class="nav-link">Source</a>
+    </li>
+
+
+                    
+            </ul></nav>
+</div>
+    </div>
+</header><nav class="navbar navbar-expand-md navbar-light bg-white static-top"><div class="collapse navbar-collapse bs-nav-collapsible" id="bs-navbar">
+            <ul class="navbar-nav nav-fill d-flex w-100">
+<li class="nav-item">
+<a href="en/archive.html" class="nav-link">Archive</a>
+                </li>
+<li class="nav-item">
+<a href="en/categories/" class="nav-link">Tags</a>
+
+                
+            </li>
+</ul>
+</div>
+<!-- /.navbar-collapse -->
+</nav>
+</div>
+
+<div class="container" id="content" role="main">
+    <div class="body-content">
+        <!--Body content-->
+        
+        
+        
+<article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">Лабораторная работа №10 "Вариационный ряд"</a></h1>
+
+        <div class="metadata">
+            <p class="byline author vcard p-author h-card"><span class="byline-name fn p-name" itemprop="author">
+                    Eugene Savostin
+            </span></p>
+            <p class="dateline">
+            <a href="." rel="bookmark">
+            <time class="published dt-published" datetime="2019-12-15T00:00:00+03:00" itemprop="datePublished" title="2019-12-15 00:00">2019-12-15 00:00</time></a>
+            </p>
+            
+        <p class="sourceline"><a href="index.rst" class="sourcelink">Source</a></p>
+
+                    <p class="linkline"><a href="https://docs.google.com/document/d/1QQ4pXvxCLWtIAnOvxoLuvEW6yMP8y1ZlFYFOWu5zucE/edit?usp=sharing">Original site</a></p>
+        </div>
+        
+
+    </header><div class="e-content entry-content" itemprop="articleBody text">
+    <dl class="docinfo simple">
+<dt>Тема<span class="colon">:</span>
+</dt>
+<dd>
+<p>Вариационный ряд</p>
+</dd>
+<dt>Цель<span class="colon">:</span>
+</dt>
+<dd>
+<p>Научиться организовывать вычисления при помощи вариационного ряда</p>
+</dd>
+<dt>Используемое оборудование<span class="colon">:</span>
+</dt>
+<dd>
+<p>ПК, среда программирования PascalABC</p>
+</dd>
+</dl>
+<section id="section-1"><h2>Задание 1</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Дан одномерный массив. Найти сумму четных по значению элементов массива.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/10.1.png" src="../../images/10.1.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../../../listings/10.1.pas.html">10.1.pas</a>  <a class="reference external" href="../../../listings/10.1.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-1" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-1" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-1"></a><span class="k">program</span> <span class="n">z1</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-2" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-2" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-2"></a>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-3" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-3" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-3"></a><span class="k">const</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-4" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-4" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-4"></a>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-5" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-5" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-5"></a><span class="k">var</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-6" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-6" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-6"></a><span class="n">k</span><span class="o">,</span> <span class="n">i</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-7" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-7" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-7"></a><span class="n">A</span><span class="o">:</span><span class="k">array</span> <span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="n">n</span><span class="p">]</span> <span class="k">of</span> <span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-8" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-8" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-8"></a>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-9" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-9" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-9"></a><span class="k">begin</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-10" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-10" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-10"></a>    <span class="n">k</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-11" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-11" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-11"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">1</span> <span class="k">to</span> <span class="n">n</span> <span class="k">do</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-12" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-12" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-12"></a>    <span class="k">begin</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-13" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-13" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-13"></a>        <span class="nb">read</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-14" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-14" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-14"></a>        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="k">mod</span> <span class="mi">2</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">then</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-15" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-15" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-15"></a>            <span class="n">k</span><span class="o">:=</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-16" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-16" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-16"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-17" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-17" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-17"></a>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-18" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-18" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-18"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="n">k</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_163a4c7e33c54b95b279f49e5e37650f-19" name="rest_code_163a4c7e33c54b95b279f49e5e37650f-19" href="#rest_code_163a4c7e33c54b95b279f49e5e37650f-19"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/10.1_res.png" src="../../images/10.1_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении программы мной были использованы операторы “for” и “if..then” для достижения выполнения задачи.</p>
+</section><section id="section-2"><h2>Задание 2</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Дан одномерный массив. С клавиатуры вводится число. Найти сумму всех элементов массива, значения которых больше числа, введеного с клавиатуры и вывести их индексы.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/10.2.png" src="../../images/10.2.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../../../listings/10.2.pas.html">10.2.pas</a>  <a class="reference external" href="../../../listings/10.2.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-1" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-1" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-1"></a><span class="k">program</span> <span class="n">z2</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-2" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-2" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-2"></a>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-3" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-3" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-3"></a><span class="k">var</span> <span class="n">a</span><span class="o">:</span><span class="k">array</span> <span class="k">of</span> <span class="kt">integer</span><span class="o">:=</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">12</span><span class="o">,</span><span class="mi">14</span><span class="o">,</span><span class="mi">16</span><span class="o">,</span><span class="mi">18</span><span class="o">,</span><span class="mi">20</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-4" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-4" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-4"></a><span class="n">k</span><span class="o">,</span><span class="n">i</span><span class="o">,</span><span class="n">n</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-5" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-5" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-5"></a>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-6" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-6" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-6"></a><span class="k">begin</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-7" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-7" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-7"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="s">'Введите число'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-8" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-8" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-8"></a>    <span class="nb">readln</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-9" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-9" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-9"></a>    <span class="nb">writeln</span> <span class="p">(</span><span class="s">'~~~~~~'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-10" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-10" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-10"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-11" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-11" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-11"></a>        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">n</span> <span class="k">then</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-12" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-12" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-12"></a>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-13" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-13" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-13"></a>        <span class="k">begin</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-14" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-14" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-14"></a>        <span class="n">k</span><span class="o">:=</span><span class="n">k</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-15" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-15" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-15"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-16" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-16" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-16"></a>        <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-17" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-17" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-17"></a>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-18" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-18" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-18"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="s">'~~~~~'</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-19" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-19" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-19"></a>        <span class="nb">writeln</span><span class="p">(</span><span class="s">'Сумма элементов равна '</span><span class="o">,</span> <span class="n">k</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-20" name="rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-20" href="#rest_code_1d3c1debc3c74d34aecd464bcf2dcda0-20"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/10.2_res.png" src="../../images/10.2_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении задания мной были использованы операторы “for” и “if..then”,а также накопительная переменная k.</p>
+</section><section id="section-3"><h2>Задание 3</h2>
+<p><strong>Постановка задачи:</strong></p>
+<p>Дан одномерный массив. Найти его среднее арифметическое. Составить второй массив элементами
+которого будут элементы первого массива, которые больше среднего арифметического. Остальные элементы заменить нулями.</p>
+<dl class="field-list simple">
+<dt>Блок-схема<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/10.3.png" src="../../images/10.3.png"><dl class="field-list simple">
+<dt>Код программы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<p><a class="reference external" href="../../../listings/10.3.pas.html">10.3.pas</a>  <a class="reference external" href="../../../listings/10.3.pas">(Источник)</a></p>
+<div class="code"><pre class="code pascal"><a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-1" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-1" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-1"></a><span class="k">program</span> <span class="n">z3</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-2" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-2" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-2"></a>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-3" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-3" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-3"></a><span class="k">var</span> <span class="n">a</span><span class="o">:</span><span class="k">array</span> <span class="k">of</span> <span class="kt">integer</span><span class="o">:=</span><span class="p">(</span><span class="mi">2</span><span class="o">,</span><span class="mi">4</span><span class="o">,</span><span class="mi">6</span><span class="o">,</span><span class="mi">8</span><span class="o">,</span><span class="mi">10</span><span class="o">,</span><span class="mi">12</span><span class="o">,</span><span class="mi">14</span><span class="o">,</span><span class="mi">16</span><span class="o">,</span><span class="mi">18</span><span class="o">,</span><span class="mi">20</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-4" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-4" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-4"></a>    <span class="n">b</span><span class="o">:</span><span class="k">array</span> <span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="mi">9</span><span class="p">]</span> <span class="k">of</span> <span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-5" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-5" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-5"></a>    <span class="n">i</span><span class="o">:</span><span class="kt">integer</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-6" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-6" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-6"></a>    <span class="n">s</span><span class="o">:</span><span class="kt">real</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-7" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-7" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-7"></a>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-8" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-8" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-8"></a><span class="k">begin</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-9" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-9" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-9"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">0</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-10" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-10" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-10"></a>        <span class="n">s</span><span class="o">:=</span><span class="n">s</span><span class="o">+</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-11" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-11" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-11"></a>    <span class="n">s</span><span class="o">:=</span><span class="n">s</span><span class="o">/</span><span class="mi">10</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-12" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-12" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-12"></a>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-13" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-13" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-13"></a>    <span class="k">for</span> <span class="n">i</span><span class="o">:=</span><span class="mi">1</span> <span class="k">to</span> <span class="mi">9</span> <span class="k">do</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-14" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-14" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-14"></a>    <span class="k">begin</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-15" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-15" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-15"></a>        <span class="k">if</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&gt;</span><span class="n">s</span> <span class="k">then</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">:=</span><span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-16" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-16" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-16"></a>        <span class="k">else</span> <span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">:=</span><span class="mi">0</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-17" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-17" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-17"></a>    <span class="k">end</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-18" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-18" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-18"></a>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-19" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-19" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-19"></a>    <span class="nb">writeln</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">;</span>
+<a id="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-20" name="rest_code_f06644d1195a4cd4af046cdd6c97fc8f-20" href="#rest_code_f06644d1195a4cd4af046cdd6c97fc8f-20"></a><span class="k">end</span><span class="o">.</span>
+</pre></div>
+<dl class="field-list simple">
+<dt>Результат работы<span class="colon">:</span>
+</dt>
+<dd><p></p></dd>
+</dl>
+<img alt="../../images/10.3_res.png" src="../../images/10.3_res.png"><p><strong>Анализ полученных результатов:</strong></p>
+<p>При выполнении программы мной были использованы операторы “for” и “if..then” для достижения выполнения задачи.</p>
+</section>
+</div>
+    <aside class="postpromonav"><nav><ul itemprop="keywords" class="tags">
+<li><a class="tag p-category" href="../../categories/1st-grade/" rel="tag">1st-grade</a></li>
+            <li><a class="tag p-category" href="../../categories/computer-science/" rel="tag">computer-science</a></li>
+            <li><a class="tag p-category" href="../../categories/lab/" rel="tag">lab</a></li>
+        </ul>
+<ul class="pager hidden-print">
+<li class="previous">
+                <a href="../iw-8/" rel="prev" title="Самостоятельная работа 8">Previous post</a>
+            </li>
+            <li class="next">
+                <a href="../lab-11/" rel="next" title='Лабораторная работа №11 "Комбинированные вычислительные процессы"'>Next post</a>
+            </li>
+        </ul></nav></aside></article><!--End of body content--><footer id="footer">
+            Contents © 2022         <a href="mailto:ddaemon12@gmail.com">Eugene Savostin</a> - Powered by         <a href="https://getnikola.com" rel="nofollow">Nikola</a>         
+            
+            
+        </footer>
+</div>
+</div>
+
+
+        <script src="../../../assets/js/all-nocdn.js"></script><script>
+    baguetteBox.run('div#content', {
+        ignoreClass: 'islink',
+        captions: function(element){var i=element.getElementsByTagName('img')[0];return i===undefined?'':i.alt;}});
+    </script>
+</body>
+</html>
